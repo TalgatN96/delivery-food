@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery food-доставка еды на дом</title>
+    <!-- название нашего нового сайта -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ссылки для подключения стилей и нормалайза -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- общий контейнер для всего сайта  -->
+
+      <header class="header">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </a>
+        <!-- поместили картинку в сыллку чтобы при нажатии на логотип можно было перейти на главную страницу -->
+
+        <input
+          type="text"
+          class="input input-address"
+          placeholder="Адрес доставки"
+        />
+        <!-- input-с помощью данной команды можно создать адресную строку  -->
+        <!-- placeholder-это подсказка которая будет находиться внутри адрессной строки -->
+
+        <div class="buttons">
+          <button class="button button-primary">
+            <img src="images/head.svg" alt="head" class="button-icon" />
+            <!-- эту картинку можно было так же поставить задним фоном в css файле с помощью команды background-image(url) -->
+            <span class="button-text">Войти</span>
+            <!-- так и не понимаю для чего заворачивать текст в span????? скорее всего для того чтобы в стилях его так же как и иконку выровнять по вертикали слишком сложно все это -->
+          </button>
+          <button class="button" id="cart-button">
+            <img src="images/cart.svg" alt="cart" class="button-icon" />
+            <span class="button-text">Корзина</span>
+          </button>
+        </div>
+      </header>
+      <!-- в данном классе содержится шапка сайта -->
+
+      <main class="main">
+        <div class="main-container">
+          <section class="about">
+            <h1 class="about-title">
+              Онлайн-сервис <br />
+              доставки еды на дом
+            </h1>
+            <p class="about-text">
+              Блюда из любимого ресторана привезет <br />
+              курьер в перчатках, маске и с антисептиком
+            </p>
+          </section>
+          <!-- информация с промо ресторана -->
+
+          <section class="restaraunts">
+            <div class="section-heading">
+              <h2 class="section-title">Рестораны</h2>
+              <input
+                type="text"
+                class="input input-search"
+                placeholder="Поиск блюд и ресторанов"
+              />
+            </div>
+
+            <div class="cards">
+              <a href="restaraunts.html" class="card">
+                <img src="images/cardimage1.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">Пицца плюс</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </a>
+              <!-- card -->
+
+              <a href="restaraunts.html" class="card">
+                <img src="images/cardimage2.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">Тануки</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </a>
+              <!-- card -->
+
+              <a href="restaraunts.html" class="card">
+                <img src="images/cardimage3.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">FoodBand</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </a>
+              <!-- card -->
+
+              <a href="restaraunts.html" class="card">
+                <img src="images/cardimage4.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">Жадина-пицца</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </a>
+              <!-- card -->
+
+              <a href="restaraunts.html" class="card">
+                <img src="images/cardimage5.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">Точка еды</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </a>
+              <!-- card -->
+
+              <div href="restaraunts.html" class="card">
+                <img src="images/cardimage6.jpg" alt="" class="card-image" />
+                <div class="card-text">
+                  <div class="card-heading">
+                    <h3 class="card-title">PizzaBurger</h3>
+                    <span class="card-tag tag">50 мин</span>
+                  </div>
+                  <!-- card heading -->
+                  <div class="card-info">
+                    <div class="rating">
+                      <img
+                        src="images/rating.svg"
+                        alt=""
+                        class="rating-star"
+                      />4.5
+                    </div>
+                    <div class="price">От 900 ₽</div>
+                    <div class="category">Пицца</div>
+                  </div>
+                  <!-- card info -->
+                </div>
+                <!-- card-text -->
+              </div>
+              <!-- card -->
+            </div>
+            <!-- cards -->
+          </section>
+          <!-- информация ресторана -->
+        </div>
+        <!-- контейнер меина -->
+      </main>
+      <!-- основной класс с содержимым ресторана -->
+      <!-- нужно было создать сначала класс хедер затем в него поместить хедер-контейнер,после создать класс мэйн и только потом поместить мэйн контейнер у меня получилось наоборот поэтому после мэйна у меня следует закрывающий тег див с контейнером не стал менять так как не хотел тратить время на исправление ошибок -->
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-block">
+            <img src="images/logo.svg" alt="logo" class="footer-logo" />
+            <nav class="footer-nav">
+              <a href="#" class="footer-link">Ресторанам </a
+              ><a href="#" class="footer-link">Курьерам</a
+              ><a href="#" class="footer-link">Пресс-центр</a
+              ><a href="#" class="footer-link">Контакты</a>
+            </nav>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><img
+                  src="images/IG.svg"
+                  alt="Instagram"
+                  class="social-logos" /></a
+              ><a href="#" class="social-link"
+                ><img
+                  src="images/FB.svg"
+                  alt="Facebook"
+                  class="social-logos" /></a
+              ><a href="#" class="social-link"
+                ><img src="images/VK.svg" alt="Vkontakte" class="social-logos"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- container ТОТ САМЫЙ ДИВ КОНТЕЙНЕР КОТОРЫЙ ДОЛЖЕН БЫЛ ОСТАТЬСЯ В ХЕДЕРЕ  -->
+  </body>
+</html>

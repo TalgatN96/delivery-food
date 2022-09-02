@@ -1,0 +1,595 @@
+* {
+  box-sizing: border-box;
+  /* для всех элементов чтобы высчитывалась правильно высота и ширина (обещал показать на трансляции)!!!!!!!!!!!! */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  /* проставил видимые границы контента в шапке страницы */
+  max-width: 1200px;
+  /* общая ширина макета составляет 1200 контент распологается в данной ширине */
+  margin: auto;
+  /* разместил контент по центру страницы  */
+}
+
+.header {
+  display: flex;
+  /* элементы находящиеся внутри шапки расположил по горизонтали */
+  align-items: center;
+  /* элементы находящиеся внутри шапки расположил вертикально по центру  */
+  justify-content: space-between;
+  /* элементы внутри шапки расположил по краям чтобы расстояние было между ними одинаковое */
+  margin-top: 44px;
+  margin-bottom: 40px;
+}
+
+input {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  padding-left: 35px;
+  /*  данную величину выбрал исходя из отступа от левого края на 11 пикселей взял ширину самой картинку 15 пикселей и расстояние до текста 5 пикселей  */
+  background-repeat: no-repeat;
+  /* для того чтобы убрать повторяющиеся картинки применили данную команду */
+  background-position: left 11px center;
+  /* с помощью данной команды расположили картинку слева от текста и расположили вертикально по центру */
+  /* задали ей отступ от левого края на 11 пикселей  */
+}
+/* создали общий тег и задали задали ему стили так как инпуты одинаковые */
+
+.input-address {
+  flex: 0.8;
+  /* данный параметр позволяет расположить контент на 80 процентов по всей странице */
+  /* width: 690px; */
+  background-image: url(../images/Vector.svg);
+  /* данной командой мы поставили картинку внутрь адрессной строки */
+}
+
+.input-search {
+  background-image: url(../images/search.svg);
+  width: 300px;
+  margin-left: auto;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.button-primary {
+  background: #1890ff;
+  border-radius: 2px;
+  border: 1px solid #1890ff;
+  color: white;
+  margin-right: 10px;
+}
+
+.button-card-text {
+  margin-right: 10px;
+}
+
+.button-icon {
+  margin-right: 6px;
+  /* оттолкнули текст от картинки на 6 пикселей*/
+}
+
+.about {
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+  background: #fff1b8 url(../images/about\ 18.28.46.png) no-repeat top 0px right -200px /
+    1100px;
+  /* помимо заливки фона добавил картинку с помощью url удалил повторяющиеся картинки с помощью no repeat и выровнял ее по верхнему правому краю с помощью top right -200px подвинул картинку на 200 пикселей через слеш добавил ширину данной картики 900 пикселей */
+  border-radius: 10px;
+  padding: 68px 70px;
+  margin-bottom: 56px;
+  /* задал отступы блоку с текстом  */
+}
+
+.about-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 46px;
+  color: #302c34;
+}
+
+.about-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #302c34;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+  margin-right: 30px;
+}
+
+.cards {
+  display: flex;
+  /* для того чтобы расположить все карточки по горизонтали данный способ применяется к !общему! див классу!!!!!!!!!!! */
+  flex-wrap: wrap;
+  /* применим команду для того чтобы перенести контент на новую строчку  */
+  align-items: flex-start;
+  /* для того чтобы выровнять контент в начале поперечной оси контейнера  */
+  justify-content: space-between;
+  /* раскидали карточки по всему диву на доступную ширину друг от друга */
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  /* overflow: hidden; */
+  /* ???? */
+  margin-bottom: 30px;
+  flex-basis: 30%;
+  /* проставил данную функцию когда делал адаптив страницы , для того чтобы карточки при уменьшении экрана монитора оставались так же три в ряд */
+  text-decoration: none;
+}
+
+.card-image {
+  width: 384px;
+  height: 250px;
+  object-fit: cover;
+  /* Элемент увеличивается или уменьшается, чтобы целиком заполнить заданную область с сохранением пропорций. */
+}
+
+.card-text {
+  padding: 20px 23px 34px;
+  /* с помощью паддинга задали отступы тексту от картинки */
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  /* для того чтобы расположить по центру элементы относительно друг другу */
+  justify-content: space-between;
+  /* расположить элементы относительно другу по краям  */
+}
+
+.card-title {
+  margin: 0;
+  /* откючили маржин так как изначально для всех стоял авто */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.card-title-reg {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.card-tag {
+  background: #262626;
+  border-radius: 2px;
+  padding: 1px 8px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+
+  /* обязательно нужно выравнить по центру  */
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.card-price-bold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+  margin-left: 30px;
+}
+
+.rating {
+  margin-right: 26px;
+  color: #ffc107;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.price,
+.category {
+  color: #8c8c8c;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.price {
+  margin-right: 10px;
+}
+
+.ingredients {
+  color: #8c8c8c;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  /* задали этому псевдоэлементу свою высоту и ширину согласно данным из макета */
+  background-color: #8c8c8c;
+  /* цвет элемента совпадает с текстом поэтому задаем фон согласно цвету текста */
+  display: inline-block;
+  /* обозначаем элемент как строчно-блочный чтобы он отобразился на нашей странице */
+  vertical-align: middle;
+  /* вертикально центрируем его посеридине */
+  border-radius: 50%;
+  /* наш элемент отображается как квадрат или прямоугольник с помощью команды dib мы задаем ему скругление чтобы он стал отображаться как точка  */
+  margin-left: 10px;
+}
+/* с помщью данной команды after можно создать псевдоэлемент который позволяет после определенного тега добавить какую нибудь информаию текст символы  */
+
+.main {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+  );
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  margin: auto;
+  /* команда не сработала потому что у дива контейнера уже был задан марджин общий для всего контента на странице */
+}
+
+.footer-link {
+  display: inline-block;
+  /* не до конца понял для чего мы перевели это в строчный элемент */
+  color: #595959;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: none;
+}
+
+.footer-link:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-link:not(:last-child) {
+  margin-right: 21px;
+}
+
+.modal {
+  position: fixed;
+  /* фиксируем позицию модального окна чтобы оно всегда было на экране не прокручивалось */
+  display: none;
+  /* до подключения скрипта здесь стоял флекс поставили ноне сделав его невидимым чтобы в последующем прописать скрипт с помощью эктив */
+  left: 0;
+  top: 0;
+  /* приклеиваем его к верхнему левому краю */
+  width: 100%;
+  /* растягиваем на сто процентов ширины экрана от родителя */
+  height: 100%;
+  /* тоже самое но с высотой  */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.is-open {
+  display: flex;
+}
+/* подготовлен для скрипта чтобы в будущем сделать видимым модальное окно */
+
+.modal-dialog {
+  margin: auto;
+  max-width: 780px;
+  /* максимальная ширина диалогового окна */
+  width: 95%;
+  /* его общая ширина 95 процентов тоесть неполная */
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 40px 45px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.modal-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.close {
+  font-size: 36px;
+  border: none;
+  background-color: transparent;
+}
+
+.food-row {
+  display: flex;
+  align-items: flex-start;
+  /* расположили контент в линию */
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d9d9;
+  /* таким способом с помощью отступа падинга и команды можно сделать рамку */
+  margin-bottom: 15px;
+}
+
+.food-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.food-price {
+  margin-left: auto;
+  margin-right: 47px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.food-counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter-button {
+  width: 39px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #40a9ff;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #40a9ff;
+}
+
+.counter {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 52px;
+}
+
+.footer-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.pricetag {
+  padding: 15px 20px;
+  background: #262626;
+  border-radius: 5px;
+  color: #fafafa;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 990px;
+  }
+
+  .about {
+    background-size: 1000px;
+    background-position: center right -250px;
+  }
+  /* body {
+    background-color: red;
+  } */
+  /*   данный способ позволя ет проверить если разрешение экрана будет менее 1200 пикселей экран окрасится в красный цвет */
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .about {
+    padding: 50px;
+    background-size: 900px;
+    background-position: center right -250px;
+  }
+  .about-text {
+    font-size: 18px;
+  }
+  .card {
+    flex-basis: 49%;
+    /* добавил данную функции чтобы разместить на странице с данным разрешением по две карточки */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .card-info {
+    flex-wrap: wrap;
+    /*     с помощью данной команды перенсли информацию о карточке на новую строчку  */
+  }
+  .card.rating {
+    flex-basis: 100%;
+    /* до конца не понимаю как эта функция работает  */
+  }
+  .card-title {
+    font-size: 18px;
+    /* уменьшил шрифт заголовка карточки чтобы они не слипались и не наезжали друг на друга */
+  }
+  .about {
+    padding: 30px;
+    background-size: 750px;
+    background-position: center right -250px;
+  }
+  .about-title {
+    font-size: 30px;
+  }
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    width: 90%;
+  }
+  .header {
+    flex-wrap: wrap;
+    /* перенсли контент который не умещался или накладывался друг на друга  */
+  }
+  .input-address {
+    order: 5;
+    /*     с помощью данной команды мы выделили конкретный элемент который будет переноситься и с помощью цифры звдали ему последовательность имеется ввиду что из всех элементов в данном теге он будет последним порядком 5ым */
+    flex: 1;
+    /* с помощью данной команды мы растянули его на всю страницу  */
+    margin-top: 15px;
+  }
+  .about {
+    background-image: none;
+    /* убрали картинку чтобы она нам больше не мешала */
+  }
+  .about-title {
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .card {
+    flex-basis: 100%;
+    /* расположили карточки по одной */
+  }
+  .card-image {
+    width: 100%;
+    /* растянули ее на всю ширину */
+  }
+  .footer {
+    padding: 30px 0;
+  }
+  .footer-block {
+    align-items: flex-start;
+  }
+  .footer-nav {
+    order: 0;
+    /* данной командой поставили ее в самом начале */
+  }
+  .footer-logo {
+    margin-right: 15px;
+    order: 1;
+    /* поставили в конец */
+  }
+  .social-links {
+    order: 2;
+    /* поменяли местами теперь соц-сети стоят перед логотипом */
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    min-height: 40px;
+  }
+  .button-text {
+    display: none;
+  }
+  .about {
+    padding: 20px;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+  }
+  .footer-block {
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* перевели в колонку */
+    align-items: center;
+  }
+  .footer-logo {
+    order: 0;
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .footer-link:not(:last-child) {
+    margin-right: 0;
+  }
+}
